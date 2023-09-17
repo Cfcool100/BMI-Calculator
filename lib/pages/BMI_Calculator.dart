@@ -1,5 +1,8 @@
-import 'package:bmi_calculator/components/card.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../components/card.dart';
+import '../components/gender_card.dart';
 
 class BMICalculator extends StatelessWidget {
   @override
@@ -19,6 +22,8 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Color primaryBackgroundColor = Color(0XFF1D1E33);
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,33 +33,60 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: CardRefactor(),
+                  child: CardRefactor(
+                    primaryBackgroundColor,
+                    child: GenderCard(
+                      onPressed: () {
+                        setState(() {});
+                      },
+                      gender: FontAwesomeIcons.mars,
+                      label: 'Male',
+                    ),
+                  ),
                 ),
                 Expanded(
-                  child: CardRefactor(),
+                  child: CardRefactor(
+                    primaryBackgroundColor,
+                    child: GenderCard(
+                      onPressed: () {
+                        setState(() {});
+                      },
+                      gender: FontAwesomeIcons.venus,
+                      label: 'Female',
+                    ),
+                  ),
                 ),
               ],
             ),
           ),
           Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: Color(0XFF1D1E33),
-              ),
-              margin: EdgeInsets.all(15.0),
-            ),
+            child: CardRefactor(primaryBackgroundColor),
           ),
           Expanded(
             child: Row(
               children: [
                 Expanded(
-                  child: CardRefactor(),
+                  child: CardRefactor(primaryBackgroundColor),
                 ),
                 Expanded(
-                  child: CardRefactor(),
+                  child: CardRefactor(primaryBackgroundColor),
                 ),
               ],
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.pinkAccent,
+                borderRadius: BorderRadius.circular(8.0)),
+            margin: EdgeInsets.symmetric(horizontal: 15.0),
+            width: double.infinity,
+            height: 70.0,
+            child: TextButton(
+              onPressed: () {},
+              child: Text(
+                'CALCULATE',
+                style: TextStyle(fontSize: 20.0, color: Colors.white),
+              ),
             ),
           )
         ],
