@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class CardRefactor extends StatelessWidget {
   CardRefactor({
-    required this.customColor,
+    required this.color,
     this.child,
   });
 
-  final Color customColor;
+  final Color color;
   final child;
 
   @override
@@ -14,7 +14,7 @@ class CardRefactor extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
-        color: customColor,
+        color: color,
       ),
       margin: EdgeInsets.all(15.0),
       child: child,

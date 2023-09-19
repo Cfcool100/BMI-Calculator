@@ -3,10 +3,11 @@ import 'package:bmi_calculator/components/route_button.dart';
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
-  ResultPage(
-      {required this.result,
-      required this.resultMessage,
-      required this.interpretation});
+  ResultPage({
+    required this.result,
+    required this.resultMessage,
+    required this.interpretation,
+  });
 
   final result;
   final resultMessage;
@@ -33,7 +34,7 @@ class ResultPage extends StatelessWidget {
             Expanded(
               flex: 8,
               child: CardRefactor(
-                customColor: Color(0XFF1D1E33),
+                color: Color(0XFF1D1E33),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -67,7 +68,7 @@ class ResultPage extends StatelessWidget {
               ),
             ),
             RefactorButton(
-              onClick: () {
+              onTap: () {
                 Navigator.pop(context);
               },
               text: 'RE-CALCULATE',

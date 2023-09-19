@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class RefactorButton extends StatelessWidget {
   const RefactorButton({
     super.key,
-    required this.onClick,
+    required this.onTap,
     required this.text,
   });
 
-  final GestureTapCallback onClick;
+  final GestureTapCallback onTap;
   final String text;
 
   @override
@@ -19,7 +19,7 @@ class RefactorButton extends StatelessWidget {
       width: double.infinity,
       height: 70.0,
       child: TextButton(
-        onPressed: onClick,
+        onPressed: onTap,
         child: Text(
           text,
           style: TextStyle(

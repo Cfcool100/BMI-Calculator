@@ -20,13 +20,8 @@ class GenderCard extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
-            gender,
-            size: 80,
-          ),
-          SizedBox(
-            height: 10.0,
-          ),
+          Icon(gender, size: 80),
+          SizedBox(height: 10.0),
           Text(
             label,
             style: TextStyle(fontSize: 20.0, color: Colors.white38),

@@ -43,7 +43,7 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: CardRefactor(
-                    customColor: gender == Gender.male
+                    color: gender == Gender.male
                         ? kSecondBackgroundColor
                         : kPrimaryBackgroundColor,
                     child: GenderCard(
@@ -59,7 +59,7 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: CardRefactor(
-                    customColor: gender == Gender.female
+                    color: gender == Gender.female
                         ? kSecondBackgroundColor
                         : kPrimaryBackgroundColor,
                     child: GenderCard(
@@ -78,7 +78,7 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: CardRefactor(
-              customColor: kPrimaryBackgroundColor,
+              color: kPrimaryBackgroundColor,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -120,7 +120,7 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: CardRefactor(
-                    customColor: kPrimaryBackgroundColor,
+                    color: kPrimaryBackgroundColor,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -154,11 +154,11 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: CardRefactor(
-                    customColor: kPrimaryBackgroundColor,
+                    color: kPrimaryBackgroundColor,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Age', style: kTextStyle),
+                        Text('AGE', style: kTextStyle),
                         Text('$age', style: kValueStyle),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -189,7 +189,7 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           RefactorButton(
-            onClick: () {
+            onTap: () {
               CalculatorBrain calculate = CalculatorBrain(_height, weight);
               Navigator.push(
                 context,
