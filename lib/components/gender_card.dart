@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
+const kTextStyle = TextStyle(fontSize: 20.0, color: Colors.white38);
+
 class GenderCard extends StatelessWidget {
-  const GenderCard(
-      {required this.gender, required this.label, required this.onPressed});
+  const GenderCard({
+    required this.gender,
+    required this.label,
+    required this.onPressed,
+  });
 
   final IconData gender;
   final String label;
